@@ -13,4 +13,4 @@ def print_hi(name):
 if __name__ == '__main__':
     print_hi('PyCharm')
     print('Moin Meister')
-    print('Oh Shit here we go again')
+    print('Kann das bitte funktionieren.')
