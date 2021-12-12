@@ -20,7 +20,7 @@ uncertainties2 = np.sqrt(np.diag(covariance_matrix2))
 zeit_plot = np.linspace(zeit[0], zeit[-1], 1000)
 
 plt.plot(zeit, spannung, '.', label = 'Messwerte')
-plt.plot(zeit_plot, f(zeit_plot, *params1), label = 'Regressionkurve')
+#plt.plot(zeit_plot, f(zeit_plot, *params1), label = 'Regressionkurve')
 
 plt.xlabel(r'$\varphi/rad$')
 plt.ylabel(r'$A/V$')
