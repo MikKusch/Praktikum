@@ -27,7 +27,7 @@ plt.plot(zeit_plot, f(zeit_plot, *params2), label = 'Regressionkurve')
 print(*params1)
 print(*params2)
 
-plt.xlabel(r'$t/\mu s$')
+plt.xlabel(r'$t/ms$')
 plt.ylabel(r'$U/V$')
 
 plt.legend()
