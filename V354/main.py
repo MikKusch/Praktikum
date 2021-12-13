@@ -7,6 +7,7 @@ from scipy.optimize import curve_fit
 zeit, spannung = np.genfromtxt('Daten.txt', unpack = True)
 zeit *= 1e-3
 
+
 def f(zeit, a, b):
     return a*np.exp(b*zeit)
 
