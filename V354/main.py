@@ -9,7 +9,7 @@ zeit *= 1e-3
 
 
 def f(zeit, a, b):
-    return a*np.exp(b*zeit)
+    return a*np.exp(-2*np.pi* b*zeit)
 
 
 params1, covariance_matrix1 = curve_fit(f, zeit[::2], spannung[::2])
@@ -26,7 +26,9 @@ plt.plot(zeit_plot, f(zeit_plot, *params1), label = 'Regressionkurve')
 plt.plot(zeit_plot, f(zeit_plot, *params2), label = 'Regressionkurve')
 
 print(*params1)
+print(*uncertainties1)
 print(*params2)
+print(*uncertainties2)
 
 plt.xlabel(r'$t/ms$')
 plt.ylabel(r'$U/V$')
