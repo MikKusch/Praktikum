@@ -35,5 +35,6 @@ plt.ylabel(r'$U/V$')
 
 plt.legend()
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-plt.savefig('Graph_1.pdf')
+plt.show()
+#plt.savefig('Graph_1.pdf')
 
