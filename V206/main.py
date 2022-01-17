@@ -18,7 +18,7 @@ temp_plot = np.linspace(zeit[0], zeit[-1], 1000)
 plt.plot(zeit, t_1, '.', label = 'Messwerte')
 plt.plot(temp_plot, f(temp_plot, *params), label = 'Regressionskurve')
 
-plt.xlabel(r't in S')
+plt.xlabel(r't in s')
 plt.ylabel(r'$T_1 in K$')
 
 plt.legend()
