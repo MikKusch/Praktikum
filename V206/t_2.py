@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 
 t_2, p_a, leist, t_1, p_b = np.genfromtxt('V206.txt', unpack = True)
-zeit = np.linspace(0, 840, 28)
+zeit = np.linspace(0, 1680, 28)
 
 
 def g(zeit, a, b, d):
