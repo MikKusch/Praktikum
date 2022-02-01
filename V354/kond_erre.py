@@ -15,7 +15,7 @@ plt.savefig('Graph_4.pdf')
 plt.show()
 
 
-plt.plot(freq[8:15:], rad[8:15:], ':.', label='Messwerte')
+plt.plot(freq[8:15:], rad[8:15:], '.', label='Messwerte')
 plt.xlabel(r'$f/kHz$')
 plt.ylabel(r'$\phi/rad$')
 
