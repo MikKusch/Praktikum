@@ -39,7 +39,9 @@ t_plot_rho = np.linspace(0, 750, 1000)
 t_plot_van = np.linspace(0, 900, 1000)
 
 
-plt.plot(t_rho, np.log10(imp_rho), 'k.', label = 'Messwerte')
+#plt.plot(t_rho, np.log10(imp_rho), 'k.', label = 'Messwerte')
+plt.errorbar(t_rho, np.log10(imp_rho), yerr=np.std(np.sqrt(np.log10(imp_rho)/7)), fmt='k.', label='Rhodium')
+plt.axvline(x=375.5, ymin=0, ymax=1, label = r'$f^*$', color = 'green')
 plt.plot(t_plot_rho[:500:], N(t_plot_rho[:500:], *params_rho_k) , label = 'kurzer Zerfall')
 plt.plot(t_plot_rho[500::], N(t_plot_rho[500::], *params_rho_l) , label = 'langer Zerfall')
 
@@ -50,9 +52,11 @@ plt.title('Rhodium')
 
 plt.legend()
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
+plt.savefig('Graph_1.pdf')
 plt.show()
+plt.clf()
 
-plt.errorbar(t_van, np.log10(imp_van), yerr=np.std(np.sqrt(np.log10(imp_van))), fmt='k.', label='Vanadium')
+plt.errorbar(t_van, np.log10(imp_van), yerr=np.std(np.sqrt(np.log10(imp_van)/7)), fmt='k.', label='Vanadium')
 plt.plot(t_plot_van, N(t_plot_van, *params_van), label = 'Regressionkurve', color = 'green')
 
 
@@ -62,4 +66,5 @@ plt.title('Vanadium')
 
 plt.legend()
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
+plt.savefig('Graph_2.pdf')
 plt.show()
