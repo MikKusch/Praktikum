@@ -3,13 +3,17 @@ import matplotlib.pyplot as plt
 import uncertainties.unumpy as unp
 from scipy.optimize import curve_fit
 
-
+Nun = 190
+Nu30n = Nun/20
+Nu30s = np.std(Nun/20)
+Nu30 = unp.uarray(Nu30n, Nu30s)
+print('Nu30',Nu30)
 
 imp_rho = np.genfromtxt('Daten_Rhod.txt', unpack = True)
 imp_van = np.genfromtxt('Daten_Vana.txt', unpack = True)
 
-imp_rho = imp_rho-4.75
-imp_van = imp_van-9.5
+imp_rho = imp_rho - Nu30n
+imp_van = imp_van
 
 t_rho = np.linspace(0, 750, 50)
 t_van = np.linspace(0, 900, 30)
@@ -31,6 +35,7 @@ uncertainties_van = np.sqrt(np.diag(covariance_matrix_van))
 
 
 print('Rhodium (kurz): ', *params_rho_k)
+print('Rhodium Fehler (kurz): ', *uncertainties_rho)
 print('Rhodium (lang): ', *params_rho_l)
 print('Vandaium: ', *params_van)
 

@@ -23,7 +23,7 @@ def line(X, A, B):
 popt, pcov = curve_fit(line, dt, np.log10(unp.nominal_values(N)))
 errors = np.sqrt(np.diag(pcov))
 
-a = unp.uarray(popt[0],errors[0])
+a = unp.uarray(popt[0], errors[0])
 c = unp.uarray(popt[1], errors[1])
 print('a=', a)
 print('c=', c)
