@@ -1,12 +1,12 @@
 import numpy as np
 import scipy.constants as sc
 import matplotlib.pyplot as plt
-import uncertainties.unumpy as unp
 from scipy.optimize import curve_fit
 
 
 N, U, amp = np.genfromtxt('Daten_plateau.txt', unpack=True)
-N=N/120
+N = N/120
+Nfe = np.sqrt(N*120)/120
 
 def n(U, m, b):
     return m*U+b
@@ -20,7 +20,7 @@ print('Fehler: ', *uncertainties)
 U_plot = np.linspace(380, 580, 1000)
 
 
-plt.errorbar(U, N, yerr=np.std(N), fmt='k.', label='Messwerte')
+plt.errorbar(U, N, yerr=Nfe, fmt='k.', label='Messwerte')
 plt.plot(U_plot, n(U_plot, *params) , label = 'Plateau')
 
 
@@ -50,12 +50,26 @@ print('Totzeit: ', *T, *t)
 def Z(I, N_0):
     return (I*10**(-6))/(sc.elementary_charge*N_0)
 
+def f(x, m, b):
+    return m*x+b
 
 z = Z(amp, N)/10**10
-print(N)
 print('Z: ', z)
 
-plt.errorbar(amp, z, yerr=np.std(z), fmt='k.', label='Messwerte')
+amp_fe = 0.05/amp*100
+N_fe = Nfe/N*100
+
+zfe = amp_fe + N_fe
+zfe = z*zfe/100
+
+print(zfe)
+
+para, cov_matr = curve_fit(f, amp, z)
+
+amp_plot = np.linspace(amp[0], amp[-1], 1000)
+
+plt.errorbar(amp, z, yerr=zfe, fmt='k.', label='Messwerte')
+plt.plot(amp_plot, f(amp_plot, *para), label = 'Regressionkurve')
 
 plt.xlabel(r' I/$\mu$ A')
 plt.ylabel(r'Z/$10^{10}$')
