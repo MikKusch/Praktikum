@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fab34608-1d31-4460-b394-d2f3a76dd322" name="Changes" comment="">
+    <list default="true" id="fab34608-1d31-4460-b394-d2f3a76dd322" name="Changes" comment="...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graph_1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Graph_1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graph_2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Graph_2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,12 +98,39 @@
       <workItem from="1651703773096" duration="574000" />
       <workItem from="1652125734844" duration="43000" />
       <workItem from="1652644976050" duration="2242000" />
-      <workItem from="1652979914462" duration="3702000" />
+      <workItem from="1652979914462" duration="4062000" />
+      <workItem from="1652984093307" duration="55000" />
+      <workItem from="1652984299063" duration="9000" />
+      <workItem from="1652987031158" duration="1234000" />
+      <workItem from="1653254750397" duration="5000" />
     </task>
+    <task id="LOCAL-00001" summary="...">
+      <created>1652983688542</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652983688542</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="..." />
+    <option name="LAST_COMMIT_MESSAGE" value="..." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/V703$plot.coverage" NAME="plot Coverage Results" MODIFIED="1652125764700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../V702" />

@@ -40,6 +40,7 @@ N_1 = np.array([19535/120, ])
 N_2 = np.array([17165/120, ])
 N_3 = np.array([35999/120, ])
 
+
 T = (N_1 + N_2-N_3)/(2 * N_1 * N_2)*10**6
 t = np.sqrt(T)
 print('Totzeit: ', *T, *t)
