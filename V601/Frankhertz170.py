@@ -23,8 +23,18 @@ diff_4 = peak_pos[6]-peak_pos[5]
 diff = np.array([diff_1, diff_2, diff_3, diff_4])
 diff1 = np.mean(diff)
 
-print(diff1)
+print(peak_pos[0])
+print(peak_pos[1])
+print(peak_pos[3])
+print(peak_pos[5])
+print(peak_pos[6])
+
+abw = np.std(diff, ddof=1) / np.sqrt(np.size(diff))
+
 print(diff)
+print(diff1)
+print(peak_pos[0]-diff1)
+print(abw)
 
 pos = peaks[0]
 
