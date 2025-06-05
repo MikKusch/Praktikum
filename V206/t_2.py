@@ -26,4 +26,4 @@ plt.ylabel(r'$T_2 \, in \, ^\circ C$')
 
 plt.legend()
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-plt.savefig('Graph_2.pdf')
+plt.show()
